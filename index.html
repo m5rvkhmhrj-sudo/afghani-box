@@ -71,12 +71,13 @@ nav.scrolled{background:rgba(22,16,13,.97);box-shadow:0 2px 20px rgba(0,0,0,.3);
 .hero h1 .red{color:var(--red)}
 .hero p{color:#f0e7dd;font-size:1.15rem;margin:20px 0 32px;max-width:520px}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-.halal-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(224,164,59,.16);border:1px solid var(--gold);color:var(--gold);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;font-weight:600;padding:7px 16px;border-radius:999px;margin-bottom:22px}
+.halal-line{display:block;color:var(--gold);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.2em;font-size:.82rem;font-weight:600;margin-bottom:18px}
 
 /* strip */
 .strip{background:var(--red);color:#fff;text-align:center;padding:16px 0}
 .strip .wrap{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.92rem;font-weight:500}
-.strip span{display:flex;align-items:center;gap:9px}
+.strip span{position:relative}
+.strip span:not(:last-child)::after{content:'\00B7';position:absolute;right:-17px;top:0;opacity:.65}
 
 /* about */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -131,7 +132,7 @@ nav.scrolled{background:rgba(22,16,13,.97);box-shadow:0 2px 20px rgba(0,0,0,.3);
 .loc-card h3{color:#fff;font-size:1.7rem;margin-bottom:6px}
 .loc-card .sub{color:var(--gold);font-family:'Oswald',sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:.82rem;margin-bottom:24px}
 .loc-line{display:flex;gap:13px;margin-bottom:16px;color:#e6ddd3}
-.loc-line .ic{font-size:1.1rem;flex-shrink:0}
+.loc-line .lbl{flex-shrink:0;min-width:80px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;color:var(--gold);padding-top:3px}
 .loc-line a{color:#e6ddd3;text-decoration:none}
 .loc-line a:hover{color:var(--gold)}
 .hours-tbl{width:100%;border-collapse:collapse;margin-top:4px}
@@ -149,9 +150,9 @@ footer{background:#0d0907;color:#b7a89b;padding:58px 0 28px}
 .foot-brand img{width:60px;height:60px;border-radius:10px;object-fit:cover;background:#000}
 .foot-brand .fn{font-family:'Oswald',sans-serif;font-weight:700;color:#fff;font-size:1.35rem;letter-spacing:.04em}
 .foot-brand .ft{color:var(--gold);font-family:'Oswald',sans-serif;letter-spacing:.18em;text-transform:uppercase;font-size:.78rem}
-.foot-social{display:flex;gap:12px}
-.foot-social a{width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.82rem;transition:background .2s}
-.foot-social a:hover{background:var(--red)}
+.foot-social{display:flex;gap:26px}
+.foot-social a{color:#fff;text-decoration:none;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.9rem;transition:color .2s}
+.foot-social a:hover{color:var(--gold)}
 .foot-bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:22px;font-size:.84rem}
 
 /* skeleton */
@@ -210,7 +211,7 @@ img.loaded + .sk, .imgwrap img.loaded ~ .sk{display:none}
 <header class="hero">
   <div class="hero-bg"><img class="lazy" data-src="images/chicken-kabob-box.jpg" alt="Chicken kabob box with Afghan rice, salad and naan"><div class="sk"></div></div>
   <div class="wrap hero-inner">
-    <span class="halal-pill">&#10004; HFSAA Certified Halal</span>
+    <span class="halal-line">HFSAA Certified Halal</span>
     <div class="tag">Authentic Afghan Food &middot; Naperville</div>
     <h1>Big Afghan flavors,<br><span class="red">perfectly boxed.</span></h1>
     <p>Charcoal-grilled kabobs, fragrant Afghan rice, fresh naan and house sauces. Served in a box, made to share.</p>
@@ -223,10 +224,10 @@ img.loaded + .sk, .imgwrap img.loaded ~ .sk{display:none}
 
 <div class="strip">
   <div class="wrap">
-    <span>&#10004; HFSAA Certified Halal</span>
-    <span>&#127869; Made Fresh Daily</span>
-    <span>&#128230; The Box Concept</span>
-    <span>&#127859; Catering Available</span>
+    <span>HFSAA Certified Halal</span>
+    <span>Made Fresh Daily</span>
+    <span>The Box Concept</span>
+    <span>Catering Available</span>
   </div>
 </div>
 
@@ -242,7 +243,6 @@ img.loaded + .sk, .imgwrap img.loaded ~ .sk{display:none}
       <p class="lead">Afghani Box brings authentic Afghan cooking to Naperville with a simple idea: real, fresh flavors served in a box, made to share.</p>
       <p>Everything starts with the basics done right. Rice steamed with carrots and raisins, kabobs grilled over charcoal, naan baked fresh, and homemade white sauce and chutney on the side. It is the food we grew up on, boxed up for the way you eat today.</p>
       <div class="cert">
-        <span style="font-size:1.6rem">&#10004;</span>
         <div>
           <b>HFSAA Certified Halal</b>
           <small>Hand slaughtered by a Muslim, horizontal cut with tasmiya, and frequent inspections. A newly certified halal restaurant in Chicagoland.</small>
@@ -279,7 +279,7 @@ img.loaded + .sk, .imgwrap img.loaded ~ .sk{display:none}
     <span class="eyebrow">The Menu</span>
     <h2 class="sec-title">Built around the box</h2>
     <p class="sec-sub">Pick your protein. It comes boxed over Afghan rice with salad, naan, white sauce and chutney.</p>
-    <div class="menu-note">&#9432;&nbsp; Live prices and the full lineup are on our online ordering page. Tap <b>&nbsp;Order Online&nbsp;</b> for today's menu.</div>
+    <div class="menu-note">Live prices and the full lineup are on our online ordering page. Tap <b>&nbsp;Order Online&nbsp;</b> for today's menu.</div>
   </div>
   <div class="wrap" style="text-align:left">
     <div class="menu-cat reveal">
@@ -336,9 +336,9 @@ img.loaded + .sk, .imgwrap img.loaded ~ .sk{display:none}
     <div class="loc-card reveal">
       <h3>Afghani Box</h3>
       <div class="sub">Foodie Paradise</div>
-      <div class="loc-line"><span class="ic">&#128205;</span><span>1220 W Ogden Ave, Unit C<br>Naperville, IL 60563</span></div>
-      <div class="loc-line"><span class="ic">&#128222;</span><a href="tel:+16302763511">(630) 276-3511</a></div>
-      <div class="loc-line"><span class="ic">&#128336;</span>
+      <div class="loc-line"><span class="lbl">Address</span><span>1220 W Ogden Ave, Unit C<br>Naperville, IL 60563</span></div>
+      <div class="loc-line"><span class="lbl">Phone</span><a href="tel:+16302763511">(630) 276-3511</a></div>
+      <div class="loc-line"><span class="lbl">Hours</span>
         <table class="hours-tbl">
           <tr class="closed"><td>Monday</td><td>Closed</td></tr>
           <tr><td>Tuesday &ndash; Sunday</td><td>12:00 PM &ndash; 9:00 PM</td></tr>
@@ -364,9 +364,9 @@ img.loaded + .sk, .imgwrap img.loaded ~ .sk{display:none}
         <div><div class="fn">AFGHANI BOX</div><div class="ft">Foodie Paradise</div></div>
       </div>
       <div class="foot-social">
-        <a href="https://www.instagram.com/afghanibox/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-        <a href="https://www.yelp.com/biz/afghani-box-naperville" target="_blank" rel="noopener" aria-label="Yelp">Yelp</a>
-        <a href="https://afghanibox.toast.site/order/afghani-box-1220-west-ogden-avenue" target="_blank" rel="noopener" aria-label="Order on Toast">Order</a>
+        <a href="https://www.instagram.com/afghanibox/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.yelp.com/biz/afghani-box-naperville" target="_blank" rel="noopener">Yelp</a>
+        <a href="https://afghanibox.toast.site/order/afghani-box-1220-west-ogden-avenue" target="_blank" rel="noopener">Order Online</a>
       </div>
     </div>
     <div class="foot-bottom">
