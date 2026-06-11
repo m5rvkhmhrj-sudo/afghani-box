@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afghani Box | Halal Afghan Food in Naperville, IL</title>
+<meta name="description" content="Afghani Box serves authentic, HFSAA-certified halal Afghan food in Naperville, IL. Kabob boxes, Qabuli Palow, Chapli Kabob, Bolani, and Afghan-style ice cream. Order online or visit us at 1220 W Ogden Ave.">
+<link rel="icon" type="image/jpeg" href="images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16100d;
+  --charcoal:#241b16;
+  --red:#C8102E;
+  --red-deep:#8E0E22;
+  --gold:#E0A43B;
+  --cream:#FBF6EE;
+  --cream-2:#F2E8D8;
+  --paper:#FFFFFF;
+  --muted:#6f655c;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);line-height:1.65}
+img{display:block;max-width:100%}
+h1,h2,h3,.disp{font-family:'Oswald',sans-serif;line-height:1.1;text-transform:uppercase;letter-spacing:.01em}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+section{padding:92px 0}
+.eyebrow{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.85rem;font-weight:600;color:var(--red);display:block;margin-bottom:12px}
+.sec-title{font-size:clamp(2rem,4.4vw,3rem);color:var(--ink);margin-bottom:16px;font-weight:700}
+.sec-sub{color:var(--muted);max-width:620px}
+.center{text-align:center}.center .sec-sub{margin:0 auto}
+
+/* buttons */
+.btn{display:inline-block;padding:14px 32px;border-radius:6px;font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;text-decoration:none;cursor:pointer;border:none;transition:transform .18s,background .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 8px 22px rgba(200,16,46,.32)}
+.btn-red:hover{background:var(--red-deep)}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.8)}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#000}
+.btn-sm{padding:11px 22px;font-size:.85rem}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:60;padding:14px 0;transition:background .3s,box-shadow .3s,padding .3s}
+nav.scrolled{background:rgba(22,16,13,.97);box-shadow:0 2px 20px rgba(0,0,0,.3);padding:9px 0}
+.nav-row{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand img{width:46px;height:46px;border-radius:8px;object-fit:cover;background:#000}
+.brand b{font-family:'Oswald',sans-serif;font-weight:700;font-size:1.2rem;color:#fff;letter-spacing:.04em}
+.nav-links{display:flex;align-items:center;gap:30px;list-style:none}
+.nav-links a{text-decoration:none;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-weight:500;font-size:.92rem;color:#fff;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{padding:10px 22px}
+.hamburger{display:none;background:none;border:0;width:34px;height:26px;position:relative;z-index:70;cursor:pointer}
+.hamburger span{position:absolute;left:0;width:100%;height:3px;border-radius:2px;background:#fff;transition:.3s}
+.hamburger span:nth-child(1){top:0}.hamburger span:nth-child(2){top:11px}.hamburger span:nth-child(3){top:22px}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--ink);overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 38%}
+.hero::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(15,10,8,.92) 0%,rgba(15,10,8,.72) 42%,rgba(15,10,8,.4) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:680px;padding:130px 24px 90px;margin:0 auto;width:100%}
+.wrap.hero-inner{margin:0 auto}
+.hero .tag{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.22em;color:var(--gold);font-weight:600;font-size:.95rem;margin-bottom:14px}
+.hero h1{color:#fff;font-size:clamp(2.6rem,7vw,5rem);font-weight:700}
+.hero h1 .red{color:var(--red)}
+.hero p{color:#f0e7dd;font-size:1.15rem;margin:20px 0 32px;max-width:520px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.halal-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(224,164,59,.16);border:1px solid var(--gold);color:var(--gold);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;font-weight:600;padding:7px 16px;border-radius:999px;margin-bottom:22px}
+
+/* strip */
+.strip{background:var(--red);color:#fff;text-align:center;padding:16px 0}
+.strip .wrap{display:flex;gap:30px;justify-content:center;flex-wrap:wrap;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.92rem;font-weight:500}
+.strip span{display:flex;align-items:center;gap:9px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-photos{position:relative;padding-bottom:46px;padding-right:46px}
+.ph{border-radius:12px;overflow:hidden;background:var(--cream-2)}
+.about-photos .ph-main img{width:100%;height:430px;object-fit:cover}
+.about-photos .ph-float{position:absolute;right:0;bottom:0;width:54%;border:7px solid var(--cream);border-radius:14px;box-shadow:0 16px 40px rgba(0,0,0,.22)}
+.about-photos .ph-float img{width:100%;height:230px;object-fit:cover}
+.about-copy p{color:#4a423b;margin-bottom:16px}
+.about-copy .lead{font-size:1.15rem;color:var(--ink)}
+.cert{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border-left:4px solid var(--red);border-radius:8px;padding:18px 20px;margin-top:24px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.cert b{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:3px}
+.cert small{color:var(--muted)}
+
+/* favorites */
+.favs{background:var(--ink);color:#fff}
+.favs .sec-title{color:#fff}
+.fav-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.fav-card{background:var(--charcoal);border-radius:14px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.fav-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.45)}
+.fav-card .imgwrap{height:230px}
+.fav-card img{width:100%;height:100%;object-fit:cover}
+.fav-body{padding:22px}
+.fav-body h3{font-size:1.3rem;color:#fff;margin-bottom:8px}
+.fav-body p{font-size:.92rem;color:#c9beb2}
+
+/* menu */
+.menu-note{display:flex;gap:10px;align-items:center;justify-content:center;background:var(--cream-2);border-radius:8px;padding:14px 20px;margin:34px auto 8px;max-width:640px;color:#5a5048;font-size:.92rem}
+.menu-cat{margin-top:42px}
+.menu-cat h3{font-size:1.5rem;color:var(--red);display:flex;align-items:center;gap:16px;margin-bottom:6px}
+.menu-cat h3::after{content:'';flex:1;height:2px;background:var(--cream-2)}
+.menu-cat .cat-note{color:var(--muted);font-size:.9rem;margin-bottom:20px}
+.menu-items{display:grid;grid-template-columns:1fr 1fr;gap:16px 44px}
+.mi-row{display:flex;align-items:baseline;gap:8px}
+.mi-name{font-family:'Oswald',sans-serif;font-weight:600;font-size:1.08rem;text-transform:uppercase;letter-spacing:.02em}
+.mi-dots{flex:1;border-bottom:2px dotted #d8cab5;transform:translateY(-4px)}
+.mi-price{font-family:'Oswald',sans-serif;font-weight:600;color:var(--red);white-space:nowrap}
+.mi-desc{font-size:.9rem;color:var(--muted);margin-top:3px;max-width:94%}
+.menu-cta{text-align:center;margin-top:50px}
+
+/* gallery */
+.gallery{background:var(--cream-2)}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:46px}
+.gal-grid a{display:block;overflow:hidden;border-radius:10px;background:var(--cream)}
+.gal-grid img{width:100%;height:260px;object-fit:cover;transition:transform .45s}
+.gal-grid a:hover img{transform:scale(1.07)}
+.gal-cta{text-align:center;margin-top:34px}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;margin-top:46px}
+.loc-card{background:var(--ink);color:#fff;border-radius:16px;padding:40px;align-self:start}
+.loc-card h3{color:#fff;font-size:1.7rem;margin-bottom:6px}
+.loc-card .sub{color:var(--gold);font-family:'Oswald',sans-serif;letter-spacing:.1em;text-transform:uppercase;font-size:.82rem;margin-bottom:24px}
+.loc-line{display:flex;gap:13px;margin-bottom:16px;color:#e6ddd3}
+.loc-line .ic{font-size:1.1rem;flex-shrink:0}
+.loc-line a{color:#e6ddd3;text-decoration:none}
+.loc-line a:hover{color:var(--gold)}
+.hours-tbl{width:100%;border-collapse:collapse;margin-top:4px}
+.hours-tbl td{padding:5px 0;color:#e6ddd3;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.hours-tbl td:last-child{text-align:right;font-family:'Oswald',sans-serif;letter-spacing:.03em}
+.hours-tbl tr.closed td{color:#9a8e82}
+.loc-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.map-card{border-radius:16px;overflow:hidden;min-height:380px;background:var(--cream-2)}
+.map-card iframe{width:100%;height:100%;min-height:380px;border:0;display:block}
+
+/* footer */
+footer{background:#0d0907;color:#b7a89b;padding:58px 0 28px}
+.foot-top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:center;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.12)}
+.foot-brand{display:flex;align-items:center;gap:14px}
+.foot-brand img{width:60px;height:60px;border-radius:10px;object-fit:cover;background:#000}
+.foot-brand .fn{font-family:'Oswald',sans-serif;font-weight:700;color:#fff;font-size:1.35rem;letter-spacing:.04em}
+.foot-brand .ft{color:var(--gold);font-family:'Oswald',sans-serif;letter-spacing:.18em;text-transform:uppercase;font-size:.78rem}
+.foot-social{display:flex;gap:12px}
+.foot-social a{width:44px;height:44px;border-radius:8px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;font-family:'Oswald',sans-serif;font-size:.82rem;transition:background .2s}
+.foot-social a:hover{background:var(--red)}
+.foot-bottom{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:22px;font-size:.84rem}
+
+/* skeleton */
+.imgwrap,.ph,.gal-grid a,.hero-bg{position:relative}
+.sk{position:absolute;inset:0;background:linear-gradient(100deg,#e9ddcb 30%,#f4ecdd 50%,#e9ddcb 70%);background-size:200% 100%;animation:sh 1.3s linear infinite;z-index:1}
+.fav-card .sk,.hero-bg .sk{background:linear-gradient(100deg,#2e251f 30%,#3a2f27 50%,#2e251f 70%);background-size:200% 100%}
+@keyframes sh{0%{background-position:200% 0}100%{background-position:-200% 0}}
+img.lazy{opacity:0;transition:opacity .5s;position:relative;z-index:2}
+img.loaded{opacity:1}
+img.loaded + .sk, .imgwrap img.loaded ~ .sk{display:none}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr;gap:60px}
+  .fav-grid{grid-template-columns:1fr 1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .visit-grid{grid-template-columns:1fr}
+  .hero-bg img{object-position:center 32%}
+  .hero::after{background:linear-gradient(180deg,rgba(15,10,8,.5),rgba(15,10,8,.8))}
+}
+@media(max-width:640px){
+  section{padding:66px 0}
+  .nav-links{position:fixed;inset:0;background:var(--ink);flex-direction:column;justify-content:center;gap:32px;transform:translateX(100%);transition:transform .35s}
+  .nav-links.open{transform:none}
+  .nav-links a{font-size:1.3rem}
+  .nav-links .nav-cta{font-size:1rem}
+  .hamburger{display:block}
+  .fav-grid{grid-template-columns:1fr}
+  .menu-items{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:1fr 1fr}
+  .gal-grid img{height:170px}
+  .loc-card{padding:28px}
+}
+</style>
+</head>
+<body id="top">
+
+<nav id="nav">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top"><img src="images/logo.jpg" alt="Afghani Box logo"><b>AFGHANI BOX</b></a>
+    <button class="hamburger" id="burger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#favorites">Favorites</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a class="btn btn-red nav-cta" href="https://afghanibox.toast.site/order/afghani-box-1220-west-ogden-avenue" target="_blank" rel="noopener">Order Online</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"><img class="lazy" data-src="images/chicken-kabob-box.jpg" alt="Chicken kabob box with Afghan rice, salad and naan"><div class="sk"></div></div>
+  <div class="wrap hero-inner">
+    <span class="halal-pill">&#10004; HFSAA Certified Halal</span>
+    <div class="tag">Authentic Afghan Food &middot; Naperville</div>
+    <h1>Big Afghan flavors,<br><span class="red">perfectly boxed.</span></h1>
+    <p>Charcoal-grilled kabobs, fragrant Afghan rice, fresh naan and house sauces. Served in a box, made to share.</p>
+    <div class="hero-btns">
+      <a class="btn btn-red" href="https://afghanibox.toast.site/order/afghani-box-1220-west-ogden-avenue" target="_blank" rel="noopener">Order Online</a>
+      <a class="btn btn-ghost" href="#menu">View Menu</a>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="wrap">
+    <span>&#10004; HFSAA Certified Halal</span>
+    <span>&#127869; Made Fresh Daily</span>
+    <span>&#128230; The Box Concept</span>
+    <span>&#127859; Catering Available</span>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-photos reveal">
+      <div class="ph ph-main"><img class="lazy" data-src="images/storefront.jpg" alt="Afghani Box storefront on W Ogden Ave with the Foodie Paradise sign and red outdoor seating"><div class="sk"></div></div>
+      <div class="ph ph-float"><img class="lazy" data-src="images/kabob-tray.jpg" alt="A catering tray of charcoal-grilled Afghan kabob topped with peppers and cilantro"><div class="sk"></div></div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">Our Story</span>
+      <h2 class="sec-title">Authentic Afghan food, a whole new way</h2>
+      <p class="lead">Afghani Box brings authentic Afghan cooking to Naperville with a simple idea: real, fresh flavors served in a box, made to share.</p>
+      <p>Everything starts with the basics done right. Rice steamed with carrots and raisins, kabobs grilled over charcoal, naan baked fresh, and homemade white sauce and chutney on the side. It is the food we grew up on, boxed up for the way you eat today.</p>
+      <div class="cert">
+        <span style="font-size:1.6rem">&#10004;</span>
+        <div>
+          <b>HFSAA Certified Halal</b>
+          <small>Hand slaughtered by a Muslim, horizontal cut with tasmiya, and frequent inspections. A newly certified halal restaurant in Chicagoland.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="favs" id="favorites">
+  <div class="wrap center">
+    <span class="eyebrow">Fan Favorites</span>
+    <h2 class="sec-title">What people come back for</h2>
+    <p class="sec-sub" style="color:#c9beb2">Every box comes with Afghan rice, fresh salad, naan, and our house white sauce and chutney.</p>
+    <div class="fav-grid">
+      <div class="fav-card reveal">
+        <div class="imgwrap"><img class="lazy" data-src="images/chicken-kabob-box.jpg" alt="Chicken kabob box with Afghan rice, salad, naan and white sauce"><div class="sk"></div></div>
+        <div class="fav-body"><h3>Chicken Kabob Box</h3><p>Charcoal-grilled chicken kabob over Afghan rice, with salad, naan and house white sauce.</p></div>
+      </div>
+      <div class="fav-card reveal">
+        <div class="imgwrap"><img class="lazy" data-src="images/lamb-shank-box.jpg" alt="Qabuli Palow box with lamb over rice mixed with raisins and carrots"><div class="sk"></div></div>
+        <div class="fav-body"><h3>Qabuli Palow Box</h3><p>Afghanistan's signature dish. Tender lamb over basmati rice steamed with sweet carrots and raisins.</p></div>
+      </div>
+      <div class="fav-card reveal">
+        <div class="imgwrap"><img class="lazy" data-src="images/lamb-chop-box.jpg" alt="Lamb chop box, grilled lamb chop over Afghan rice with salad"><div class="sk"></div></div>
+        <div class="fav-body"><h3>Lamb Chop Box</h3><p>You asked, we listened. Grilled lamb chops over Afghan rice with fresh salad. A new house favorite.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap center">
+    <span class="eyebrow">The Menu</span>
+    <h2 class="sec-title">Built around the box</h2>
+    <p class="sec-sub">Pick your protein. It comes boxed over Afghan rice with salad, naan, white sauce and chutney.</p>
+    <div class="menu-note">&#9432;&nbsp; Live prices and the full lineup are on our online ordering page. Tap <b>&nbsp;Order Online&nbsp;</b> for today's menu.</div>
+  </div>
+  <div class="wrap" style="text-align:left">
+    <div class="menu-cat reveal">
+      <h3>The Boxes</h3>
+      <p class="cat-note">Each box is served over Afghan rice with salad, naan, white sauce and chutney.</p>
+      <div class="menu-items">
+        <div class="mi"><div class="mi-row"><span class="mi-name">The Afghani Box</span><span class="mi-dots"></span></div><p class="mi-desc">Our signature box. The full Afghani Box experience.</p></div>
+        <div class="mi"><div class="mi-row"><span class="mi-name">Chicken Kabob Box</span><span class="mi-dots"></span></div><p class="mi-desc">Charcoal-grilled marinated chicken kabob.</p></div>
+        <div class="mi"><div class="mi-row"><span class="mi-name">Lamb Tikka Kabob Box</span><span class="mi-dots"></span></div><p class="mi-desc">Grilled boneless lamb kabob.</p></div>
+        <div class="mi"><div class="mi-row"><span class="mi-name">Chapli Kabob Box</span><span class="mi-dots"></span></div><p class="mi-desc">Spiced Afghan-style ground beef patty kabob.</p></div>
+        <div class="mi"><div class="mi-row"><span class="mi-name">Qabuli Palow Box</span><span class="mi-dots"></span></div><p class="mi-desc">Lamb over basmati rice steamed with carrots and raisins.</p></div>
+        <div class="mi"><div class="mi-row"><span class="mi-name">Mantu Box</span><span class="mi-dots"></span></div><p class="mi-desc">Afghan steamed dumplings.</p></div>
+        <div class="mi"><div class="mi-row"><span class="mi-name">Lamb Chop Box</span><span class="mi-dots"></span></div><p class="mi-desc">Grilled lamb chops over Afghan rice. New.</p></div>
+      </div>
+    </div>
+    <div class="menu-cat reveal">
+      <h3>Fresh on the Weekend</h3>
+      <p class="cat-note">Special items added through the week. Ask in store for availability.</p>
+      <div class="menu-items">
+        <div class="mi"><div class="mi-row"><span class="mi-name">Bolani with Dogh</span><span class="mi-dots"></span><span class="mi-price">$13.95</span></div><p class="mi-desc">Stuffed Afghan flatbread served with dogh, a savory yogurt drink. Friday evenings.</p></div>
+        <div class="mi"><div class="mi-row"><span class="mi-name">Afghan Style Ice Cream</span><span class="mi-dots"></span><span class="mi-price">$4.99</span></div><p class="mi-desc">House-made Afghan-style ice cream. Available on weekends.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="menu-cta">
+    <a class="btn btn-red" href="https://afghanibox.toast.site/order/afghani-box-1220-west-ogden-avenue" target="_blank" rel="noopener">See Full Menu &amp; Order</a>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="wrap center">
+    <span class="eyebrow">Straight from the kitchen</span>
+    <h2 class="sec-title">The food</h2>
+    <div class="gal-grid">
+      <a href="images/chicken-kabob-box.jpg" target="_blank" class="reveal"><img class="lazy" data-src="images/chicken-kabob-box.jpg" alt="Chicken kabob box with rice and naan"><div class="sk"></div></a>
+      <a href="images/kabob-tray.jpg" target="_blank" class="reveal"><img class="lazy" data-src="images/kabob-tray.jpg" alt="Catering tray of grilled kabob with peppers and cilantro"><div class="sk"></div></a>
+      <a href="images/lamb-shank-box.jpg" target="_blank" class="reveal"><img class="lazy" data-src="images/lamb-shank-box.jpg" alt="Qabuli palow box with lamb over rice"><div class="sk"></div></a>
+      <a href="images/chapli-kebab-tray.jpg" target="_blank" class="reveal"><img class="lazy" data-src="images/chapli-kebab-tray.jpg" alt="Fresh chapli kebab catering tray"><div class="sk"></div></a>
+      <a href="images/catering-trays.jpg" target="_blank" class="reveal"><img class="lazy" data-src="images/catering-trays.jpg" alt="Catering trays of Afghan rice and kabob"><div class="sk"></div></a>
+      <a href="images/lamb-chop-box.jpg" target="_blank" class="reveal"><img class="lazy" data-src="images/lamb-chop-box.jpg" alt="Lamb chop box over Afghan rice"><div class="sk"></div></a>
+      <a href="images/ice-cream.jpg" target="_blank" class="reveal"><img class="lazy" data-src="images/ice-cream.jpg" alt="Afghan style ice cream in a cup"><div class="sk"></div></a>
+      <a href="images/storefront.jpg" target="_blank" class="reveal"><img class="lazy" data-src="images/storefront.jpg" alt="Afghani Box storefront with outdoor seating"><div class="sk"></div></a>
+    </div>
+    <div class="gal-cta"><a class="btn btn-dark" href="https://www.instagram.com/afghanibox/" target="_blank" rel="noopener">Follow @afghanibox</a></div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap center">
+    <span class="eyebrow">Come Eat</span>
+    <h2 class="sec-title">Visit us in Naperville</h2>
+  </div>
+  <div class="wrap visit-grid">
+    <div class="loc-card reveal">
+      <h3>Afghani Box</h3>
+      <div class="sub">Foodie Paradise</div>
+      <div class="loc-line"><span class="ic">&#128205;</span><span>1220 W Ogden Ave, Unit C<br>Naperville, IL 60563</span></div>
+      <div class="loc-line"><span class="ic">&#128222;</span><a href="tel:+16302763511">(630) 276-3511</a></div>
+      <div class="loc-line"><span class="ic">&#128336;</span>
+        <table class="hours-tbl">
+          <tr class="closed"><td>Monday</td><td>Closed</td></tr>
+          <tr><td>Tuesday &ndash; Sunday</td><td>12:00 PM &ndash; 9:00 PM</td></tr>
+        </table>
+      </div>
+      <div class="loc-actions">
+        <a class="btn btn-red btn-sm" href="https://afghanibox.toast.site/order/afghani-box-1220-west-ogden-avenue" target="_blank" rel="noopener">Order Online</a>
+        <a class="btn btn-ghost btn-sm" href="https://maps.google.com/?q=Afghani+Box+1220+W+Ogden+Ave+Naperville+IL+60563" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+    </div>
+    <div class="map-card reveal">
+      <iframe title="Map to Afghani Box" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Afghani%20Box%201220%20W%20Ogden%20Ave%20Naperville%20IL%2060563&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img src="images/logo.jpg" alt="Afghani Box logo">
+        <div><div class="fn">AFGHANI BOX</div><div class="ft">Foodie Paradise</div></div>
+      </div>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/afghanibox/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.yelp.com/biz/afghani-box-naperville" target="_blank" rel="noopener" aria-label="Yelp">Yelp</a>
+        <a href="https://afghanibox.toast.site/order/afghani-box-1220-west-ogden-avenue" target="_blank" rel="noopener" aria-label="Order on Toast">Order</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Afghani Box. All rights reserved.</span>
+      <span>1220 W Ogden Ave, Unit C, Naperville, IL 60563 &middot; (630) 276-3511</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// nav
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>50));
+const burger=document.getElementById('burger'),links=document.getElementById('navLinks');
+burger.onclick=()=>links.classList.toggle('open');
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+
+// lazy images with skeleton swap
+const imgs=[...document.querySelectorAll('img.lazy')];
+function load(img){
+  if(img.dataset.done) return; img.dataset.done=1;
+  img.src=img.dataset.src;
+  img.onload=()=>{ img.classList.add('loaded'); const sk=img.parentElement.querySelector('.sk'); if(sk) sk.style.display='none'; };
+  img.onerror=()=>{ const sk=img.parentElement.querySelector('.sk'); if(sk) sk.style.display='none'; };
+}
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){load(e.target);io.unobserve(e.target);}}),{rootMargin:'200px'});
+imgs.forEach(i=>io.observe(i));
+
+// reveal
+const ro=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+</script>
+</body>
+</html>
